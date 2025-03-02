@@ -1,11 +1,7 @@
-
-```markdown
 # TP02 Manipulation de HDFS Avec une Application JAVA
 
 This repository demonstrates how to interact with Hadoop Distributed File System (HDFS) using Java applications. The project includes:
 
-- **App1**: Reads a file from HDFS
-- **AppWriter**: Writes data to a file in HDFS
 - **Docker-Compose Setup**: Deploys an HDFS cluster with a NameNode and multiple DataNodes
 
 ## Prerequisites
@@ -22,8 +18,8 @@ Ensure you have the following installed:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/ayman-gassi/hadoop-labs/.git
-cd <repository_name>
+git clone https://github.com/ayman-gassi/hadoop-labs/TP02.git
+cd hadoop-labs/TP02
 ```
 
 ### Step 2: Start the HDFS Cluster (cd HDFSCLuster)
@@ -61,55 +57,19 @@ hdfs dfs -mkdir /user/hadoop
 hdfs dfs -touchz /file.txt
 ```
 
-### Uploading a File
-
-```bash
-hdfs dfs -put localfile.txt /file.txt
-```
-
-### Listing Files
-
-```bash
-hdfs dfs -ls /
-```
-
-### Reading a File
-
-```bash
-hdfs dfs -cat /file.txt
-```
-
 ## 3. Running the Java Applications
 
-### Step 1: Compile the Java Code
-
-Ensure your Hadoop JARs are available in the classpath.
+This will Run Every App java file.
 
 ```bash
-javac -cp "./jars/*" -d . src/org/example/tpHDFS/App1.java
-javac -cp "./jars/*" -d . src/org/example/tpHDFS/AppWriter.java
-```
-
-### Step 2: Run the Writer Application
-
-This will create a new file (`file2.txt`) in HDFS and write data into it.
-
-```bash
-java -cp "./jars/*:." org.example.tpHDFS.AppWriter
-```
-
-Verify the file content:
-
-```bash
-hdfs dfs -cat /file2.txt
-```
-
-### Step 3: Run the Reader Application
-
-This will read and print the content of `/file.txt`.
-
-```bash
-java -cp "./jars/*:." org.example.tpHDFS.App1
+cd jars
+java -jar App0.jar
+java -jar App1.jar
+java -jar App2.jar
+java -jar App3.jar
+java -jar App4.jar
+java -jar App5.jar
+java -jar App6.jar
 ```
 
 ## 4. Stopping the Cluster
@@ -138,12 +98,3 @@ docker ps
 docker restart namenode
 ```
 
-## Resources
-
-- [Hadoop Official Documentation](https://hadoop.apache.org/docs/current/)
-- [HDFS Commands](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html)
-
-Enjoy experimenting with HDFS! 🚀
-```
-
-N'oubliez pas de remplacer `<repository_url>` et `<repository_name>` par les valeurs appropriées pour votre projet. Ce fichier `README.md` fournit une documentation claire et complète pour les utilisateurs de votre repository.
