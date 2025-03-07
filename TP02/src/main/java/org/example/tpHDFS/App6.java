@@ -6,7 +6,7 @@ import org.apache.hadoop.fs.*;
 import java.io.*;
 
 public class App6 {
-    public static void CreateCSV(String hdfsFilePath , FileSystem fs){
+    public static void CreateCSV(String hdfsFilePath, FileSystem fs) {
         try {
             // Chemin du fichier CSV
             Path path = new Path(hdfsFilePath);
@@ -50,7 +50,8 @@ public class App6 {
         }
 
     }
-    public static void ReadCSV(String hdfsFilePath,FileSystem fs){
+
+    public static void ReadCSV(String hdfsFilePath, FileSystem fs) {
         try {
             // Chemin du fichier CSV
             Path path = new Path(hdfsFilePath);
@@ -80,20 +81,22 @@ public class App6 {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) throws IOException {
         // Configuration Hadoop
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS","hdfs://namenode:8020");
+        conf.set("fs.defaultFS", "hdfs://namenode:8020");
 
         // Obtenir une instance de FileSystem
         FileSystem fs = FileSystem.get(conf);
 
-        // Écrire un fichier CSV contenant une liste de produits (ID, Nom, Prix) dans HDFS sous /user/hadoop/appData/products.csv.
-        CreateCSV("/user/hadoop/appData/products.csv",fs);
+        // Écrire un fichier CSV contenant une liste de produits (ID, Nom, Prix) dans
+        // HDFS sous /user/hadoop/appData/products.csv.
+        CreateCSV("/user/hadoop/appData/products.csv", fs);
 
-        // Lire le fichier CSV /user/hadoop/appData/products.csv depuis HDFS et afficher son contenu ligne par ligne.
-        ReadCSV("/user/hadoop/appData/products.csv",fs);
-
+        // Lire le fichier CSV /user/hadoop/appData/products.csv depuis HDFS et afficher
+        // son contenu ligne par ligne.
+        ReadCSV("/user/hadoop/appData/products.csv", fs);
 
         fs.close();
     }

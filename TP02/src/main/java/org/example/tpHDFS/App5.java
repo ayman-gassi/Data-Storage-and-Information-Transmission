@@ -6,7 +6,7 @@ import org.apache.hadoop.fs.*;
 import java.io.*;
 
 public class App5 {
-    public static void GetFileMetadata(String filePath,FileSystem fs){
+    public static void GetFileMetadata(String filePath, FileSystem fs) {
         try {
             // Chemin du fichier
             Path path = new Path(filePath);
@@ -30,12 +30,12 @@ public class App5 {
             System.out.println("Date de modification : " + fileStatus.getModificationTime());
             System.out.println("Est un répertoire : " + fileStatus.isDirectory());
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public static void HDFSSpaceCheck(FileSystem fs){
+
+    public static void HDFSSpaceCheck(FileSystem fs) {
         try {
             // Récupérer les informations sur l'espace HDFS
             ContentSummary contentSummary = fs.getContentSummary(new Path("/"));
@@ -43,15 +43,15 @@ public class App5 {
             // Afficher les informations sur l'espace
             System.out.println("Espace total dans HDFS : " + contentSummary.getSpaceConsumed() + " octets");
             System.out.println("Espace utilisé dans HDFS : " + contentSummary.getSpaceQuota() + " octets");
-            System.out.println("Espace libre dans HDFS : " + (contentSummary.getSpaceQuota() - contentSummary.getSpaceConsumed()) + " octets");
-
-
+            System.out.println("Espace libre dans HDFS : "
+                    + (contentSummary.getSpaceQuota() - contentSummary.getSpaceConsumed()) + " octets");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public static void MoveFile(String sourcePath ,String destinationPath,FileSystem fs){
+
+    public static void MoveFile(String sourcePath, String destinationPath, FileSystem fs) {
         try {
             // Chemins source et destination
             Path srcPath = new Path(sourcePath);
@@ -84,33 +84,31 @@ public class App5 {
                 System.out.println("Échec du déplacement du fichier.");
             }
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) throws IOException {
         // Configuration Hadoop
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS","hdfs://namenode:8020");
+        conf.set("fs.defaultFS", "hdfs://namenode:8020");
 
         // Obtenir une instance de FileSystem
         FileSystem fs = FileSystem.get(conf);
 
-        // -Récupérer et afficher les métadonnées du fichier /user/hadoop/appData/test.txt.
-        GetFileMetadata("/user/hadoop/appData/test.txt",fs);
+        // -Récupérer et afficher les métadonnées du fichier
+        // /user/hadoop/appData/test.txt.
+        GetFileMetadata("/user/hadoop/appData/test.txt", fs);
 
         // -Vérifier l’espace disponible dans HDFS.
         HDFSSpaceCheck(fs);
 
-        // - Déplacer le fichier /user/hadoop/appData/test.txt dans un sous-répertoire /user/hadoop/archive/.
+        // - Déplacer le fichier /user/hadoop/appData/test.txt dans un sous-répertoire
+        // /user/hadoop/archive/.
         String sourcePath = "/user/hadoop/appData/test.txt";
         String destinationPath = "/user/hadoop/archive/test.txt";
-        MoveFile(sourcePath,destinationPath,fs);
-
-
-
-
+        MoveFile(sourcePath, destinationPath, fs);
 
         fs.close();
     }

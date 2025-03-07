@@ -6,7 +6,7 @@ import org.apache.hadoop.fs.*;
 import java.io.*;
 
 public class App3 {
-    public static void CopyFromLocal(String localFilePath , String hdfsFilePath ,FileSystem fs){
+    public static void CopyFromLocal(String localFilePath, String hdfsFilePath, FileSystem fs) {
         try {
 
             // Chemins source (local) et destination (HDFS)
@@ -23,13 +23,12 @@ public class App3 {
             fs.copyFromLocalFile(localPath, hdfsPath);
             System.out.println("Fichier copie de " + localFilePath + " vers " + hdfsFilePath + " sur HDFS.");
 
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public static void RenameFile(String sourcePath , String destinationPath ,FileSystem fs){
+
+    public static void RenameFile(String sourcePath, String destinationPath, FileSystem fs) {
         try {
 
             // Chemins source et destination
@@ -56,30 +55,30 @@ public class App3 {
                 System.out.println("Échec du renommage du fichier.");
             }
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
+
     public static void main(String[] args) throws IOException {
         // Configuration Hadoop
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS","hdfs://namenode:8020");
+        conf.set("fs.defaultFS", "hdfs://namenode:8020");
 
         // Obtenir une instance de FileSystem
         FileSystem fs = FileSystem.get(conf);
 
-        // Copier un fichier local test.txt dans HDFS sous /user/hadoop/appData/test.txt.
+        // Copier un fichier local test.txt dans HDFS sous
+        // /user/hadoop/appData/test.txt.
         String localFilePath = "TP02/test.txt";
         String hdfsFilePath = "/user/hadoop/appData/test.txt";
-        CopyFromLocal(localFilePath,hdfsFilePath,fs);
+        CopyFromLocal(localFilePath, hdfsFilePath, fs);
 
-        // Renommer le fichier /user/hadoop/appData/data.txt en /user/hadoop/appData/data_v1.txt.
+        // Renommer le fichier /user/hadoop/appData/data.txt en
+        // /user/hadoop/appData/data_v1.txt.
         String newName = "/user/hadoop/appData/data_v1.txt";
-        RenameFile(hdfsFilePath,newName,fs);
-
-
+        RenameFile(hdfsFilePath, newName, fs);
 
         fs.close();
     }

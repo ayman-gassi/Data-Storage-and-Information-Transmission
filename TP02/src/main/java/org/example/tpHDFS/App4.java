@@ -6,7 +6,7 @@ import org.apache.hadoop.fs.*;
 import java.io.*;
 
 public class App4 {
-    public static void DeleteFile(String filePath, FileSystem fs){
+    public static void DeleteFile(String filePath, FileSystem fs) {
         try {
             // Chemin du fichier à supprimer
             Path path = new Path(filePath);
@@ -25,25 +25,23 @@ public class App4 {
                 System.out.println("Échec de la suppression du fichier " + filePath + ".");
             }
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
+
     public static void main(String[] args) throws IOException {
         // Configuration Hadoop
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS","hdfs://namenode:8020");
+        conf.set("fs.defaultFS", "hdfs://namenode:8020");
 
         // Obtenir une instance de FileSystem
         FileSystem fs = FileSystem.get(conf);
 
-
         // Supprimer le fichier /user/hadoop/appData/data_v1.txt dans HDFS.
         String fileName = "/user/hadoop/appData/data_v1.txt";
-        DeleteFile(fileName,fs);
-
+        DeleteFile(fileName, fs);
 
         fs.close();
     }
