@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.models.Block;
+import org.example.models.Transaction;
 
 import java.util.ArrayList;
 
@@ -9,17 +10,21 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Block> chain = new ArrayList<>();
-        chain.add(new Block(0,"block1","0"));
-        chain.add(new Block(1,"block2",chain.get(0).getCurrentHash()));
-        chain.add(new Block(2,"block3",chain.get(1).getCurrentHash()));
-        chain.add(new Block(3,"block4",chain.get(2).getCurrentHash()));
-        chain.add(new Block(4,"block5",chain.get(3).getCurrentHash()));
+        ArrayList<Transaction> transactions = new ArrayList<>();
+        transactions.add(new Transaction("Ayman","Othmane",2000));
+        chain.add(new Block(0,transactions,"0"));
+        transactions.add(new Transaction("Ayman","Ahmed",5000));
+        chain.add(new Block(1,transactions,chain.get(0).getCurrentHash()));
+        transactions.add(new Transaction("Ayman","Sami",10));
+        chain.add(new Block(2,transactions,chain.get(1).getCurrentHash()));
+        transactions.add(new Transaction("Ayman","Oussama",10000000));
+        chain.add(new Block(3,transactions,chain.get(2).getCurrentHash()));
         chain.forEach(System.out::println);
         System.out.println("Verification of the chain");
         System.out.println(Block.verifychain(chain) ? "Blockchain Valide" : "Blockchain not valid ");
-        System.out.println("Verification 2 of the chain");
-        chain.get(3).setPriviousHash("Hacking");
-        System.out.println(Block.verifychain(chain) ? "Blockchain Valide" : "Blockchain not valid ");
+    //        System.out.println("Verification 2 of the chain");
+    //      chain.get(3).setPriviousHash("Hacking");
+    //    System.out.println(Block.verifychain(chain) ? "Blockchain Valide" : "Blockchain not valid ");
 
     }
 }

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fbc0cee-24f5-43b7-b3ca-e0b5e2f878b3" name="Changes" comment="" />
+    <list default="true" id="7fbc0cee-24f5-43b7-b3ca-e0b5e2f878b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../BlockChain/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/models/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlockChain/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BlockChain/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/models/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/models/Block.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,9 +24,15 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2tzTMo0oApZs0vHemgy76X7bbcD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,6 +43,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/ayman/Documents/Mundiapolis/S8/Strorage & Data Transmission/Data Storage and Information Transmission/AESCryptApp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741353861485</updated>
       <workItem from="1741353862635" duration="3190000" />
+      <workItem from="1743245278180" duration="237000" />
     </task>
     <servers />
   </component>
