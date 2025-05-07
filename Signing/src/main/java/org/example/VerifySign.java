@@ -8,9 +8,9 @@ import java.util.Base64;
 
 public class VerifySign {
     public static void main(String[] args) throws Exception {
-        String message = "Ayman Test";
-        String ReceivedSignEncoded = "NIM6bhLWMfdXzJo36LZWHAA_zCRcOpVKgksJILPnG7U=";
-        String secret = "1234567812345678";
+        String message = "xxxxxxx.xx MAD au xx/xx/2025";
+        String ReceivedSignEncoded = "iOy4ZLDXH33lszzTbZxxoUGKVN2ZKw7lXPWvS7kNkyE=";
+        String secret = "MDEyMzQ1Njc4OUFCQ0RFRkdISUpLTE1O";
         SecretKey secretKey = new SecretKeySpec(secret.getBytes(),0,secret.length(),"HmacSHA256");
         Mac mac = Mac.getInstance("HmacSHA256");
         mac.init(secretKey);

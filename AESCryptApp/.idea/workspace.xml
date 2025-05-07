@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fbc0cee-24f5-43b7-b3ca-e0b5e2f878b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../BlockChain/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BlockChain/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BlockChain/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/models/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BlockChain/src/main/java/org/example/models/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Crypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientAES.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Decrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ServeurAES.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RSACryptApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RSACryptApp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RSACryptApp/src/main/java/org/example/Crypt_Decrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RSACryptApp/src/main/java/org/example/Crypt_Decrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Signing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Signing/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Signing/src/main/java/org/example/PreSign.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Signing/src/main/java/org/example/PreSign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Signing/src/main/java/org/example/VerifySign.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Signing/src/main/java/org/example/VerifySign.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/ayman/Documents/Mundiapolis/S8/Strorage & Data Transmission/Data Storage and Information Transmission/AESCryptApp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/ayman/Documents/Mundiapolis/S8/Strorage & Data Transmission/AESCryptAPP/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ayman/Documents/Mundiapolis/S8/Strorage &amp; Data Transmission/Data Storage and Information Transmission/RSACryptApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ayman/Documents/Mundiapolis/S8/Strorage &amp; Data Transmission/AESCryptAPP/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,6 +66,9 @@
       <updated>1741353861485</updated>
       <workItem from="1741353862635" duration="3190000" />
       <workItem from="1743245278180" duration="237000" />
+      <workItem from="1743707543589" duration="30000" />
+      <workItem from="1744381090460" duration="329000" />
+      <workItem from="1745317802764" duration="27000" />
     </task>
     <servers />
   </component>

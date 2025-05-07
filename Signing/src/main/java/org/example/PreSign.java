@@ -10,8 +10,8 @@ import java.util.Base64;
 // then press Enter. You can now see whitespace characters in your code.
 public class PreSign {
     public static void main(String[] args) throws Exception{
-       String message = "Ayman Test";
-       String secret = "1234567812345678";
+       String message = "xxxxxxx.xx MAD au xx/xx/2025";
+       String secret = "MDEyMzQ1Njc4OUFCQ0RFRkdISUpLTE1O";
        SecretKey secretKey = new SecretKeySpec(secret.getBytes(),0,secret.length(),"HmacSHA256");
 
         Mac mac = Mac.getInstance("HmacSHA256");
